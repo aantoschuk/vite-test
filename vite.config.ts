@@ -9,9 +9,9 @@ export default defineConfig({
     // add alias
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "components": path.resolve(__dirname, "./src/components/"),
-      "pages": path.resolve(__dirname, "./src/pages/"),
-      "assets": path.resolve(__dirname, "./src/assets/"),
+      components: path.resolve(__dirname, "./src/components/"),
+      pages: path.resolve(__dirname, "./src/pages/"),
+      assets: path.resolve(__dirname, "./src/assets/"),
     },
   },
   // set custom host & port
@@ -20,4 +20,7 @@ export default defineConfig({
     port: 3000,
   },
   plugins: [react()],
+  define: {
+    __APP_NAME__: JSON.stringify("custom-app-name"),
+  },
 });

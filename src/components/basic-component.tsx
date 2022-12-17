@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import reactLogo from "assets/react.svg";
 
-import { BasicComponentStyeld as Styled } from "./basic-component.styled.ts";
+import { BasicComponentStyeld as Styled } from "./basic-component.styled";
 
 export const BasicComponent = () => {
   const [count, setCount] = useState(0);
@@ -30,6 +30,7 @@ export const BasicComponent = () => {
         Click on the Vite and React logos to learn more
       </p>
       <Styled.secret>{import.meta.env.VITE_SECRET_VALUE}</Styled.secret>
+      <p>{__APP_NAME__}</p>
     </div>
   );
 };
